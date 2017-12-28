@@ -1242,9 +1242,9 @@
               borderWidth: 2
             };
 
-            if(s.type !== null) {
-              dataset.type = s.type;
-              dataset.fill = s.type === "area";
+            if ("seriesType" in s) {
+              dataset.type = s.seriesType;
+              dataset.fill = s.seriesType === "area";
             }
 
             if (s.stack) {
