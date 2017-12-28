@@ -1242,6 +1242,11 @@
               borderWidth: 2
             };
 
+            if(s.type !== null) {
+              dataset.type = s.type;
+              dataset.fill = s.type === "area";
+            }
+
             if (s.stack) {
               dataset.stack = s.stack;
             }
