@@ -1244,7 +1244,7 @@
 
             if ("seriesType" in s) {
               dataset.type = s.seriesType;
-              dataset.fill = s.seriesType === "area";
+              dataset.fill = s.seriesType === "line" && s.seriesFill;
             }
 
             if (s.stack) {
