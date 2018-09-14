@@ -1242,6 +1242,11 @@
               borderWidth: 2
             };
 
+            if ("seriesType" in s) {
+              dataset.type = s.seriesType;
+              dataset.fill = s.seriesType === "line" && s.seriesFill;
+            }
+
             if (s.stack) {
               dataset.stack = s.stack;
             }
